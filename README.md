@@ -87,15 +87,15 @@ local menu = {
 
 for k, v in pairs(randomTable) do
     table.insert(menu,  {
-        header = "Random Title " .. key .. " data: " .. k,
+        header = "Random Title " .. key .. " data: " .. v,
         context = "Random context " .. key .. " data: " .. v,
-        server = true -- this passes the event below to the server instead of client
-        image = "show a cool image ending in jpg, png, gif, etc"
-        event = "this fires some event"
+        server = true, -- this passes the event below to the server instead of client
+        image = "show a cool image ending in jpg, png, gif, etc",
+        event = "this fires some event",
     }
 end
 
-TriggerEvent('nh-context:createMenu', menu)
+TriggerEvent('nh-context:sendMenu', menu)
 
 ```
 
